@@ -97,3 +97,4 @@ jobs:
         kubectl get pods
         TYPE=GITHUB-KIND bats -t tests/test.bats
         popd
+
