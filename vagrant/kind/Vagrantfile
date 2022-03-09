@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
     chmod a+x ./kind
     sudo mv ./kind /usr/local/bin/kind
 
-    sudo kind create cluster --config hiskio-course/vagrant/kind.yaml
+    sudo kind create cluster --retain --config hiskio-course/vagrant/kind.yaml
     sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
     set -x; cd "$(mktemp -d)" &&
